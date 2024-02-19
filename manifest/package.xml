@@ -25,12 +25,18 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>assignmentForm</members>
+        <members>assignmentList</members>
         <members>assignmentTree</members>
         <name>LightningComponentBundle</name>
     </types>
     <types>
         <members>LWC_Assignment_Permission_Set</members>
         <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>AssignmentChannel</members>
+        <name>LightningMessageChannel</name>
     </types>
     <version>59.0</version>
 </Package>

@@ -1,3 +1,31 @@
 <template>
-    Assignment List
+    <lightning-card>
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <h2 class="slds-text-heading_medium slds-m-left_medium">
+                Assignment List
+            </h2>
+
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="search" label="Search" onchange={handleSearch}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-datatable key-field="id" data={data} columns={columns}>
+                    hide-checkbox-column
+                </lightning-datatable>
+
+                <lightning-layout class="slds-m-top_medium">
+                    <lightning-layout-item>
+                        <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousPage}
+                            disabled={disablePrevious}></lightning-button>
+                    </lightning-layout-item>
+                    <lightning-layout-item>
+                        <lightning-button label="next" icon-name="utility:chevronright" icon-position="right"
+                            onclick={nextPage} disabled={disableNext}></lightning-button>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+    </lightning-card>
 </template>

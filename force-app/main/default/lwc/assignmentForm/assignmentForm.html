@@ -1,3 +1,25 @@
 <template>
-    Assignment Form
+    <lightning-card title="Create Assignments">
+        <lightning-record-edit-form object-api-name="Assignment__c" onsuccess={handleSuccess} onsubmit={handleSubmit}>
+            <lightning-messages> </lightning-messages>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="Title__c" required></lightning-input-field>
+                        <lightning-input-field field-name="AssignmentGroup__c"> </lightning-input-field>
+                        <lightning-input-field field-name="DueDate__c" required> </lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="Priority__c" required> </lightning-input-field>
+                        <lightning-input-field field-name="Description__c"> </lightning-input-field>
+                        <lightning-input-field field-name="Status__c"> </lightning-input-field>
+                    </div>
+                </div>
+                <lightning-button class="slds-m-top_small" type="submit" label="Create new">
+                </lightning-button>
+                <lightning-button class="slds-m-top_small" label="reset" onclick={handleReset}>
+                </lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
 </template>
